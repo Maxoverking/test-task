@@ -1,18 +1,28 @@
-import { useEffect } from "react";
-import { DIV, H1 } from "./App.styled.jsx";
+import { useEffect, useState } from "react";
+import { CONTAINER } from "./App.styled.jsx";
 import Card from "./component/Card/Card";
+import { getUsers } from "./component/servises/Servises.js";
 
 function App() {
-  useEffect(() => {});
-  return (
-    <DIV className="App">
-      <H1>APP</H1>
-      <h2>APSSSS</h2>
-      <h2>wWWWWWWWS</h2>
-      <span>EEEEEEE</span>
+  const [users, setUsersData] = useState([]);
 
-      <Card />
-    </DIV>
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const getUsersData = await getUsers();
+        setUsersData(getUsersData);
+      } catch (error) {
+        console.log("🚀  error ", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  console.log("🚀  users:", users);
+  return (
+    <CONTAINER className="App">
+      {users.length > 0 ? <Card /> : " Loading"}
+    </CONTAINER>
   );
 }
 

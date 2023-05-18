@@ -1,12 +1,8 @@
-// .App {
-//   text-align: center;
-// }
-
 import styled from 'styled-components';
 
-export const DIV = styled.div`
-  /* border: 2px solid red;
-  padding: 20px;
+export const CONTAINER = styled.div`
+
+  /* padding: 20px;
   color: rgb(236, 9, 194); */
   text-align: center;
     

@@ -1,20 +1,11 @@
 import axios from "axios";
-axios.defaults.baseURL = "https://api.themoviedb.org/3";
-const API_KEY = "?api_key=7df6de4dd7060a529be76412dec8d9af";
-const trending_all = "/trending/movie/day";
-// const search_movie = "/search/movie";
+axios.defaults.baseURL = "https://63bb362a32d17a50908a3770.mockapi.io/";
+const allUsers = "users";
 
-export const RequestTrendingMovies = async () => {
+export const getUsers = async () => {
   try {
-    const response = await axios.get(`${trending_all}${API_KEY}`);
-    // return response.data.results;
-    return response.data.results.map(({ id, title, poster_path }) => {
-      return {
-        id,
-        title,
-        poster_path,
-      };
-    });
+    const { data } = await axios.get(`${allUsers}`);
+    return data;
   } catch (error) {
     console.log("🚀  error RequestTrendingMovies", error);
   }
