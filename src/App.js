@@ -8,6 +8,7 @@ function App() {
     <DIV className="App">
       <H1>APP</H1>
       <h2>APSSSS</h2>
+      <h2>wWWWWWWWS</h2>
       <span>EEEEEEE</span>
 
       <Card />
