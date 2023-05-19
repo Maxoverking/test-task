@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CONTAINER } from "./App.styled.jsx";
-import Card from "./component/Card/Card";
+import Card from "./component/card/Card";
 import { getUsers } from "./component/servises/Servises.js";
 
 function App() {
