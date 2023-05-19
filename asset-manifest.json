@@ -1,15 +1,18 @@
 {
   "files": {
     "main.css": "/test-task/static/css/main.467b72d6.css",
-    "main.js": "/test-task/static/js/main.5bd7da4d.js",
+    "main.js": "/test-task/static/js/main.aaf96200.js",
     "static/media/Montserrat-Regular.ttf": "/test-task/static/media/Montserrat-Regular.94bb495fba6077f669ed.ttf",
     "static/media/Montserrat-Regular.woff": "/test-task/static/media/Montserrat-Regular.65d7525760db1cd20960.woff",
+    "static/media/picture21x.png": "/test-task/static/media/picture21x.032662a2a907475127d7.png",
+    "static/media/i.webp": "/test-task/static/media/i.be45899d0a85ebd3ef9a.webp",
+    "static/media/sprite.svg": "/test-task/static/media/sprite.83bdba60259a85fb3077545bcec1031b.svg",
     "index.html": "/test-task/index.html",
     "main.467b72d6.css.map": "/test-task/static/css/main.467b72d6.css.map",
-    "main.5bd7da4d.js.map": "/test-task/static/js/main.5bd7da4d.js.map"
+    "main.aaf96200.js.map": "/test-task/static/js/main.aaf96200.js.map"
   },
   "entrypoints": [
     "static/css/main.467b72d6.css",
-    "static/js/main.5bd7da4d.js"
+    "static/js/main.aaf96200.js"
   ]
 }
