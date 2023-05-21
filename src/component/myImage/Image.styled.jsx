@@ -16,10 +16,10 @@ box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06), inset 0px -1.71846px 3.
   } */
 ` 
 export const IMG = styled.img`
-/* display:none; */
+/* display:none;  */
 display: inline-block;
 width: 308px;
 height: 168px;
-/* padding:0 12px; */
+padding:0 12px;
 ` 
 

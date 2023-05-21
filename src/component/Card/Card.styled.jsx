@@ -7,7 +7,7 @@ export const CARD_LIST = styled.ul`
   gap: 16px 48px;
   margin: 20px; 
 
-     @media (min-width: 770px) and (max-width: 1100px) {
+  @media (min-width: 770px) and (max-width: 1100px) {
     gap: 16px 18px;
   }
 
@@ -22,12 +22,9 @@ export const CARD_LIST = styled.ul`
    grid-template-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
   }
-  border: 2px solid red;
 ` 
-
 export const CARD = styled.li`
 position: relative;
-/* display: flex; */
 justify-content: center;
 flex-direction: column;
 max-width: 380px;
@@ -45,48 +42,34 @@ border-radius: 20px;
 ` 
 export const GRID_CONTAINER = styled.div`
 @media (min-width: 1279px) {
-  
-     display: flex;
+    display: flex;
     justify-content: center;
   }
 ` 
 export const DIV = styled.div`
 position:relative;
- &::after {
-    display:block;
-    content: "";
-    width: 100%;
-    margin-bottom:62px;
-    height: 8px;
-    background: #EBD8FF;
-    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06), 
-    inset 0px -1.71846px 3.43693px #AE7BE3,
-    inset 0px 3.43693px 2.5777px #FBF8FF;
-    
-  }
-` 
-export const LI = styled.li`
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-text-transform: uppercase;
-margin-bottom:16px;
-color: #EBD8FF;
-` 
-export const UL = styled.ul`
-margin-bottom:26px;
-` 
-export const BUTTON = styled.button`
-width: 196px;
-height: 50px;
-text-transform: uppercase;
-background: #EBD8FF;
-box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+&::after {
+  display:block;
+  content: "";
+  width: 100%;
+  margin-bottom:62px;
+  height: 8px;
+  background: #EBD8FF;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06), 
+  inset 0px -1.71846px 3.43693px #AE7BE3,
+  inset 0px 3.43693px 2.5777px #FBF8FF;
+  
+}
 ` 
 export const AVATAR_IMG = styled.img`
-width: 80px;
-height: 80px;
+position: absolute;
+transform: translate(-50px, -50px);
+border-radius: 50px;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 64px;
+height: 67px;
 ` 
 export const DIV_IMG = styled.div`
 position: absolute;
@@ -95,12 +78,8 @@ left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
 border-radius:50px;
-/* border: 8px solid #EBD8FF; */
-/* background: #EBD8FF;
+background: #EBD8FF;
 box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), 
-inset 0px -2.19582px 4.39163px #AE7BE3,
- inset 0px 4.39163px 3.29372px #FBF8FF; */
- background: #EBD8FF;
-box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), inset 0px -2.19582px 4.39163px #AE7BE3, inset 0px 4.39163px 3.29372px #FBF8FF;
-border: 8px solid #EBD8FF;;
+inset 0px -2.19582px 4.39163px #AE7BE3, 
+inset 0px 4.39163px 3.29372px #FBF8FF;
 ` 

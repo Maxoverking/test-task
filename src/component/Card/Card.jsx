@@ -1,32 +1,32 @@
-import { GRID_CONTAINER, CARD_LIST, CARD,DIV,UL,LI,BUTTON,AVATAR_IMG,DIV_IMG} from './Card.styled';
+import { GRID_CONTAINER, CARD_LIST, CARD,DIV,AVATAR_IMG, DIV_IMG} from './Card.styled';
 import { LogoGoit } from '../MyIcons/Logo';
-import { Image } from '../myImage/Image';
-import  avatar  from '../../images/i.webp';
+import { Image } from '../MyImage/Image';
+import { Round } from '../MyIcons/Round';
+import { TweetBlock } from '../Tweet/TweetBlock';
+import { useSelector } from 'react-redux';
+import { usersFollowSelector } from '../../redux/users/selectors';
 
-function Card() {
-    return (
-        <>
-            <GRID_CONTAINER>
-                <CARD_LIST>
-                    <CARD>
-                        <LogoGoit />
-                        <Image /> 
-                        <DIV>
-                            <DIV_IMG>
-                                <AVATAR_IMG src={avatar} alt=""/>
-                            </DIV_IMG>
-                            
-                        </DIV>
-                        <UL>
-                            <LI>fgd</LI>
-                            <LI>dfg</LI>
-                        </UL>
-                        <BUTTON>Follow</BUTTON>
-                    </CARD>
-                </CARD_LIST>
-            </GRID_CONTAINER>
-        </>
-    )
+const  Card = ()=> {
+    const users = useSelector(usersFollowSelector);
+return (
+<GRID_CONTAINER>
+    <CARD_LIST>
+        {users.map((user) => (
+            <CARD key={user.id} id={user.id}>
+            <LogoGoit />
+            <Image /> 
+            <DIV>
+                <DIV_IMG>
+                    <AVATAR_IMG src={`${user.avatar}`} alt={user.name} />
+                    <Round/>
+                </DIV_IMG>
+            </DIV>
+                <TweetBlock user={user} />  
+        </CARD>
+        ))}
+    </CARD_LIST>
+</GRID_CONTAINER>
+)
 };
 
 export default Card;
