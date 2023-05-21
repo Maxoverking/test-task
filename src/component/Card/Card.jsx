@@ -1,9 +1,10 @@
 import { GRID_CONTAINER, CARD_LIST, CARD,DIV,AVATAR_IMG, DIV_IMG} from './Card.styled';
 import { LogoGoit } from '../MyIcons/Logo';
-import { Image } from '../MyImage/Image';
+import { Image } from '../myImage/Image';
 import { Round } from '../MyIcons/Round';
 import { TweetBlock } from '../Tweet/TweetBlock';
 import { useSelector } from 'react-redux';
+
 import { usersFollowSelector } from '../../redux/users/selectors';
 
 const  Card = ()=> {
