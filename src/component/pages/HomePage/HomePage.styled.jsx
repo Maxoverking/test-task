@@ -24,7 +24,7 @@ letter-spacing:3px;
 line-height:137%;
 background:transparent;
 color: #d17627;
--webkit-text-stroke: 0.25vh #15efe4;
+-webkit-text-stroke: 0.25vh #f1ce07;
 @media (min-width: 1028px){
     margin-top:60px;
 }

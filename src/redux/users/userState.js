@@ -5,4 +5,5 @@ export const usersInitState = {
   users: [],
   status: STATUS.idle,
   filter: showCard.showAll,
+  pages: 0,
 };

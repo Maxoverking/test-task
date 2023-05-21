@@ -16,11 +16,15 @@ export const usersReducer = createSlice({
     filtered: (state, { payload }) => {
       state.filter = payload;
     },
+    pagesStore: (state, { payload }) => {
+      state.pages = payload;
+    },
   },
   extraReducers: (buider) => {
     buider
       .addCase(usersGetAction, (state, { payload }) => ({
         users: [...state.users, ...payload],
+        // users: state.users.push(action.payload),
         status: STATUS.success,
         filter: showCard.showAll,
       }))
@@ -37,4 +41,4 @@ export const usersReducer = createSlice({
   },
 });
 
-export const { filtered } = usersReducer.actions;
+export const { filtered, pagesStore } = usersReducer.actions;

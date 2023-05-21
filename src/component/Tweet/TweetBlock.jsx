@@ -7,7 +7,7 @@ import {
 } from "react-redux";
 import { minusFollowerAction, plusFollowerAction } from "../../redux/follow/followSlice";
 import { existingIdSelector } from "../../redux/follow/selector";
-import { followUser } from '../servises/Servises';
+import { updateUser } from '../servises/Servises';
 import { usersChangeActionMinus, usersChangeActionPlus } from '../../redux/users/actions';
 
 
@@ -21,11 +21,11 @@ const TweetBlock = ({ user }) => {
         const currentId = evt.target.id;
         
         if (!existingUser) {
-            followUser(user,true)
+            updateUser(user,true)
             dispatch(plusFollowerAction(currentId));
             dispatch(usersChangeActionPlus(currentId));
         } else if (existingUser) {
-            followUser(user,false)
+            updateUser(user,false)
             dispatch(minusFollowerAction(currentId));
             dispatch(usersChangeActionMinus(currentId));
         }

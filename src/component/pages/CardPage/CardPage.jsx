@@ -1,52 +1,55 @@
 import { useDispatch, useSelector } from "react-redux";
 import Card from "../../Card/Card";
 import { NavigationButton } from "../../NavigationButton/NavigationButton";
-import { usersSelector } from "../../../redux/users/selectors";
+import { usersPagesSelector, usersSelector } from "../../../redux/users/selectors";
 import { BUTTON, CONTAINER } from "./CardPage.styled";
 import { useEffect, useState } from "react";
 import { getUsers } from "../../servises/Servises";
 import { usersGetAction } from "../../../redux/users/actions";
+import { pagesStore } from "../../../redux/users/usersSlice";
 
 
 const CardPage = () => {
     const dispatch = useDispatch();
     const users = useSelector(usersSelector);
+    const page = useSelector(usersPagesSelector);
 
-  const [pages, setPages] = useState(1);
+    const [pages, setPages] = useState(1);
 
-  useEffect(() => {
+    useEffect(() => {
     const fetchData = async () => {
-      try {
-        const getUsersData = await getUsers(pages);
-        dispatch(usersGetAction(getUsersData));
-      } catch (error) {
-        console.log("🚀  error ", error);
-      }
+        try {
+            if (page < pages) {
+            const getUsersData = await getUsers(pages);
+            dispatch(usersGetAction(getUsersData));
+            dispatch(pagesStore(pages));
+            }
+        } catch (error) {
+        console.log(error);
+        }
     };
     fetchData();
-  }, [dispatch, pages]);
+  }, [dispatch, page, pages]);
 
-  const loadMore = () => {
+    const loadMore = () => {
     setPages((page) => page + 1);
-  };
-
-
+    };
     return (
         <>
-              <NavigationButton />
-      <CONTAINER>
-        {users.length ? (
-          <>
-            <Card />
+            <NavigationButton />
+                <CONTAINER>
+                    {users.length ? (
+                    <>
+                        <Card />
 
-            <BUTTON type="button" onClick={loadMore}>
-              load more
-            </BUTTON>
-          </>
-        ) : (
-          " Loading"
-        )}
-      </CONTAINER>
+                        <BUTTON type="button" onClick={loadMore}>
+                        load more
+                        </BUTTON>
+                    </>
+                    ) : (
+                    " Loading"
+                    )}
+                </CONTAINER>
         </>
     )
 }
