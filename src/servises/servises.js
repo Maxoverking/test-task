@@ -1,5 +1,5 @@
 import axios from "axios";
-import { updatedUsers } from "../../helper/updateUsers";
+import { updatedUsers } from "../helper/updateUsers";
 // import { createAsyncThunk } from "@reduxjs/toolkit";
 // import { setPages } from "../../redux/users/usersSlice";
 axios.defaults.baseURL = "https://63bb362a32d17a50908a3770.mockapi.io/";

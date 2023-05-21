@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
@@ -150,7 +151,6 @@ const animate = () => {
 init();
 window.addEventListener("resize", handleResize);
 animate();
-
 return () => {
   window.removeEventListener("resize", handleResize);
   // Clean up Three.js resources (optional)
@@ -158,8 +158,9 @@ return () => {
   p.geometry.dispose();
   p.material.dispose();
 };
+  
 }, []);
-
+  
 return <canvas ref={canvasRef} />;
 };
 

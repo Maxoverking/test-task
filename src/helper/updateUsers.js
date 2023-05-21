@@ -9,6 +9,7 @@ export const updateUsers = (users, isIncrement, payload) => {
     return user;
   });
 };
+
 export const updatedUsers = (user, isIncrement) => {
   return {
     ...user,

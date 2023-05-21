@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const UL = styled.ul`
 margin-bottom:26px;
 ` 
-
 export const LI = styled.li`
 font-weight: 500;
 font-size: 20px;
@@ -12,7 +11,6 @@ text-transform: uppercase;
 margin-bottom:16px;
 color: #EBD8FF;
 ` 
-
 export const BUTTON = styled.button`
 width: 196px;
 height: 50px;

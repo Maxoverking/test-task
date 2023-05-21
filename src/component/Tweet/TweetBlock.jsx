@@ -7,9 +7,8 @@ import {
 } from "react-redux";
 import { minusFollowerAction, plusFollowerAction } from "../../redux/follow/followSlice";
 import { existingIdSelector } from "../../redux/follow/selector";
-import { updateUser } from '../servises/Servises';
+import { updateUser } from '../../servises/servises';
 import { usersChangeActionMinus, usersChangeActionPlus } from '../../redux/users/actions';
-
 
 const TweetBlock = ({ user }) => {
     const dispatch = useDispatch();
@@ -29,7 +28,6 @@ const TweetBlock = ({ user }) => {
             dispatch(minusFollowerAction(currentId));
             dispatch(usersChangeActionMinus(currentId));
         }
-        
     }
 
     return (<>

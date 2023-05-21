@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
-
 export const CONTAINER = styled.div`
 margin-bottom: 50px;
-  text-align: center;
-    
+text-align: center;
+` 
+export const LOADER = styled.div`
+display: flex;
+justify-content: center;
 ` 
 export const BUTTON = styled.button`
 width: 110px;

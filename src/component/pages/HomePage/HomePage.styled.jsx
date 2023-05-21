@@ -16,19 +16,19 @@ color: #d1af27;
 `
 export const P = styled.p`
 left: 60px;
-font-size:4vh;
-font-weight:700;
-margin-top:20px;
-border-radius:20px;
-letter-spacing:3px;
-line-height:137%;
-background:transparent;
-color: #d17627;
--webkit-text-stroke: 0.25vh #f1ce07;
+font-size: 3vh;
+font-weight: 700;
+margin-top: 20px;
+border-radius: 20px;
+letter-spacing: 2px;
+line-height: 137%;
+background: transparent;
+color: rgb(209, 118, 39);
+-webkit-text-stroke: 0.16vh rgb(241, 206, 7);
 @media (min-width: 1028px){
     margin-top:60px;
 }
-@media (max-width: 900px){
+@media (max-width: 1100px){
     margin-top:80px;
 }
 @media (max-width: 690px){
@@ -41,7 +41,6 @@ display:flex;
 left: 60px;
 font-size:20px;
 margin-top:20px;
-
 height:500px;
 background:transparent;
 color: #d1af27;

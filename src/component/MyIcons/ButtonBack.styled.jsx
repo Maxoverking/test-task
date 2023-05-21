@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 
 const circleAnimation = keyframes`
   0% {
-    width: 3rem;
+    width: 48px;
   }
   100% {
     width: 100%;
@@ -54,10 +54,10 @@ export const Button = styled(Link)`
     position: relative;
     display: block;
     margin: 0;
-    width: 3rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
     background: #282936;
-    border-radius: 1.625rem;
+    border-radius: 26px;
   }
 
   .circle .icon {
@@ -71,19 +71,18 @@ export const Button = styled(Link)`
 
   .circle .icon.arrow {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    left: 0.625rem;
-    /* width: 1.125rem; */
-    height: 0.125rem;
+    left: 10px;
+    height:2px;
     background: none;
     &::before {
       position: absolute;
       content: "";
-      top: -0.29rem;
+      top: -4.64px;
       right: -22px;
-      width: 0.625rem;
-      height: 0.625rem;
-      border-top: 0.125rem solid #fff;
-      border-right: 0.125rem solid #fff;
+      width: 10px;
+      height: 10px;
+      border-top:2px solid #fff;
+      border-right:2px solid #fff;
       transform: rotate(225deg);
     }
   }
@@ -95,8 +94,6 @@ export const Button = styled(Link)`
     left: -5px;
     right: 0;
     bottom: 0;
-    /* padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem; */
     padding: 12px 0;
     margin: 0 0 0 29.6px;
     color: #ffffff;
