@@ -27,35 +27,3 @@ export const updateUser = async (user, isIncrement) => {
     console.log("🚀  error getUsers", error);
   }
 };
-
-// export const getUsers = createAsyncThunk(
-//   "users/fetchUsers",
-//   async (page = 1, thunkAPI) => {
-//     try {
-//       const { data } = await axios.get(`${allUsers}`, {
-//         params: {
-//           page,
-//           limit: 3,
-//         },
-//       });
-//       thunkAPI.dispatch(setPages(page));
-
-//       return data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
-// export const updateUser = createAsyncThunk(
-//   "users/followUser",
-//   async (user, isIncrement, thunkAPI) => {
-//     const update = updatedUsers(user, isIncrement);
-//     try {
-//       const { data } = await axios.put(`${allUsers}/${user.id}`, update);
-
-//       return data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
