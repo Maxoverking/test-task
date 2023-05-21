@@ -1,6 +1,7 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const BUTTON = styled.button`
+export const BUTTON = styled(NavLink)`
 position:absolute;
 right: 60px;
 font-size:20px;

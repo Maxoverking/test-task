@@ -1,5 +1,5 @@
 import { BUTTON,DIV,DIV_CARD, P} from "./HomePage.styled";
-import { GiEntryDoor } from 'react-icons/gi';
+import { GiExitDoor } from 'react-icons/gi';
 import card  from '../../../images/Follow.png';
 import card2  from '../../../images/Following.png';
 import ThreeScene from "./ThreeScene";
@@ -8,8 +8,8 @@ import ThreeScene from "./ThreeScene";
 export default function HomePage(params) {
     return (
         <>
-        <BUTTON>
-            <GiEntryDoor size={52} color="#c0f"/>
+        <BUTTON to="/tweets">
+            <GiExitDoor size={52} color="#c0f"/>
         </BUTTON>
         <DIV>
             <P>Lorem ipsum dolor sit amet, consectetur adipisicing

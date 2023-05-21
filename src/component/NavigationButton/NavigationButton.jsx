@@ -11,11 +11,14 @@ import {
 import { filtered } from "../../redux/users/usersSlice";
 import { showCard } from "../../constants/showCard";
 import { usersFilterSelector } from "../../redux/users/selectors";
+// import { useLocation } from "react-router-dom";
+import ButtonBack from "../MyIcons/ButtonBack";
 
 
 const NavigationButton = () => {
     const currentLight =  useSelector(usersFilterSelector);
     const dispatch = useDispatch();
+
     const handleOption = (filter) => {
         dispatch(filtered(filter))
     }
@@ -41,7 +44,8 @@ const NavigationButton = () => {
 
     return (
         <>
-        <LightButtonWrap>
+            <LightButtonWrap>
+            <ButtonBack/>
             {buttonData.map((button, index) => (
                 <LightButtonContainer key={index}>
                 <LightButton>
