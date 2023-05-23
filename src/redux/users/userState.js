@@ -6,5 +6,6 @@ export const usersInitState = {
   filter: showCard.showAll,
   homePage: true,
   status: STATUS.idle,
+  tweets: false,
   pages: 0,
 };

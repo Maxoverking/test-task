@@ -1,17 +1,18 @@
 // import { showCard } from "../../constants/showCard";
-import { createSlice } from "@reduxjs/toolkit";
-import { usersInitState } from "./userState";
+import { createSlice } from '@reduxjs/toolkit';
+import { usersInitState } from './userState';
 import {
   usersChangeActionMinus,
   usersChangeActionPlus,
   usersChangeActionStatus,
-} from "./actions";
-import { updateUsers } from "../../helper/updateUsers";
-import { STATUS } from "../../constants/statusConstant";
-import { getUsersThunk } from "../../servises/servises";
+} from './actions';
+import { updateUsers } from '../../helper/updateUsers';
+import { STATUS } from '../../constants/statusConstant';
+import { getUsersThunk } from '../../servises/servises';
 // import { usersStatusSelector } from "./selectors";
-const handlePending = (state) => {
+const handlePending = state => {
   state.status = STATUS.loading;
+  state.tweets = true;
 };
 
 // const handleRejected = (state, action) => {
@@ -20,7 +21,7 @@ const handlePending = (state) => {
 // };
 
 export const usersReducer = createSlice({
-  name: "users",
+  name: 'users',
   initialState: usersInitState,
   reducers: {
     filtered: (state, { payload }) => {
@@ -30,7 +31,7 @@ export const usersReducer = createSlice({
       state.pages = payload;
     },
   },
-  extraReducers: (buider) => {
+  extraReducers: buider => {
     buider
       .addCase(getUsersThunk.pending, handlePending)
       .addCase(getUsersThunk.fulfilled, (state, { payload }) => ({

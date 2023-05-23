@@ -5,6 +5,7 @@ import { existingIdSelector } from "../follow/selector";
 export const usersSelector = (state) => state.users.users;
 export const usersFilterSelector = (state) => state.users.filter;
 export const usersStatusSelector = (state) => state.users.status;
+export const usersTweetsSelector = (state) => state.users.tweets;
 export const usersPagesSelector = (state) => state.users.pages;
 
 export const usersFollowSelector = createSelector(
