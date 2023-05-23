@@ -1,13 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
-// import { updateUserThunk } from "../../servises/servises";
-// import { updateUsers } from "../../helper/updateUsers";
+import { createSlice } from '@reduxjs/toolkit';
 
 export const followInitState = {
   follow: [],
 };
 
 export const followingReducer = createSlice({
-  name: "follow",
+  name: 'follow',
   initialState: followInitState,
   reducers: {
     plusFollowerAction: (state, { payload }) => ({
@@ -16,7 +14,7 @@ export const followingReducer = createSlice({
     }),
     minusFollowerAction: (state, { payload }) => ({
       ...state,
-      follow: state.follow.filter((element) => element !== payload),
+      follow: state.follow.filter(element => element !== payload),
     }),
   },
 });

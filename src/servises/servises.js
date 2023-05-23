@@ -1,15 +1,13 @@
-// axios.defaults.baseURL = "https://63bb362a32d17a50908a3770.mockapi.io/";
-// import { updatedUsers } from "../helper/updateUsers";
-import axios from "axios";
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { usersChangeActionStatus } from "../redux/users/actions";
-import { STATUS } from "../constants/statusConstant";
+import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { usersChangeActionStatus } from '../redux/users/actions';
+import { STATUS } from '../constants/statusConstant';
 
 const usersApi = axios.create({
-  baseURL: "https://63bb362a32d17a50908a3770.mockapi.io/",
+  baseURL: 'https://63bb362a32d17a50908a3770.mockapi.io/',
 });
 
-const usersEndpoint = "users";
+const usersEndpoint = 'users';
 
 export const getUsersThunk = createAsyncThunk(
   usersEndpoint,
@@ -23,7 +21,7 @@ export const getUsersThunk = createAsyncThunk(
       });
       return data;
     } catch (error) {
-      console.log("🚀  error getUsers", error);
+      console.log('🚀  error getUsers', error);
     }
   }
 );
@@ -38,10 +36,10 @@ export const updateUserThunk = createAsyncThunk(
       );
 
       thunkAPI.dispatch(usersChangeActionStatus(STATUS.success));
-      // console.log("🚀  data:", data);
+
       return data;
     } catch (error) {
-      console.log("🚀  error getUsers", error);
+      console.log('🚀  error getUsers', error);
     }
   }
 );

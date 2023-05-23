@@ -9,17 +9,9 @@ import {
 import { updateUsers } from '../../helper/updateUsers';
 import { STATUS } from '../../constants/statusConstant';
 import { getUsersThunk } from '../../servises/servises';
-// import { usersStatusSelector } from "./selectors";
 const handlePending = state => {
   state.status = STATUS.loading;
-  state.tweets = true;
 };
-
-// const handleRejected = (state, action) => {
-//   state.status = STATUS.error;
-//   state.error = action.payload;
-// };
-
 export const usersReducer = createSlice({
   name: 'users',
   initialState: usersInitState,
