@@ -8,7 +8,7 @@ const lightBackground = `
     rgba(255, 255, 255, 0) 80%,
     rgba(255, 255, 255, 0) 100%
   );
-`
+`;
 const lightActive = `
     position: absolute;
   top: -80px;
@@ -17,27 +17,26 @@ const lightActive = `
   height: 82px;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   background: transparent;
-`
+`;
 const displayFlexJustyfyCenter = `
 display: flex;
 justify-content: center;
-`
+`;
 
 export const LightButtonWrap = styled.div`
   ${displayFlexJustyfyCenter}
   gap: 30px;
-`
+`;
 
 export const LightButtonContainer = styled.div`
   position: relative;
   height: 100px;
   display: flex;
   align-items: flex-end;
-
-`
+`;
 
 export const ButtonHolder = styled.div`
- ${displayFlexJustyfyCenter}
+  ${displayFlexJustyfyCenter}
   flex-direction: column;
   align-items: center;
   height: 40px;
@@ -49,13 +48,13 @@ export const ButtonHolder = styled.div`
   transition: 300ms;
   outline: #0f0f0f 2px solid;
   outline-offset: 20;
-`
+`;
 
 export const ButtonIcon = styled.svg`
   height: 50px;
   fill: #0f0f0f;
   transition: 300ms;
-`
+`;
 
 export const LightHolder = styled.div`
   position: absolute;
@@ -64,7 +63,7 @@ export const LightHolder = styled.div`
   flex-direction: column;
   height: 0px;
   width: 100px;
-`
+`;
 
 export const Dot = styled.div`
   position: absolute;
@@ -75,14 +74,14 @@ export const Dot = styled.div`
   background-color: #0a0a0a;
   border-radius: 10px;
   z-index: 2;
-`
+`;
 
 export const Light = styled.div`
   ${lightActive}
-`
+`;
 export const LightActive = styled.div`
   ${lightActive}
-`
+`;
 export const LightButton = styled.button`
   &:hover ${ButtonIcon} {
     fill: rgba(88, 101, 242, 1);
@@ -100,4 +99,4 @@ export const LightButton = styled.button`
   & ${LightActive} {
     ${lightBackground}
   }
-`
+`;
