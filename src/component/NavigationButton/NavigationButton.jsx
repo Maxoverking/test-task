@@ -11,9 +11,7 @@ import {
 import { filtered } from "../../redux/users/usersSlice";
 import { showCard } from "../../constants/showCard";
 import { usersFilterSelector } from "../../redux/users/selectors";
-// import { useLocation } from "react-router-dom";
 import ButtonBack from "../MyIcons/ButtonBack";
-
 
 const NavigationButton = () => {
     const currentLight =  useSelector(usersFilterSelector);

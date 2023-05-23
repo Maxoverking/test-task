@@ -4,7 +4,6 @@ import { Button } from './ButtonBack.styled';
 
 const ButtonBack = () => {
     const location = useLocation();
-    // const backLinkHref = location.state?.from ?? '/';
 return (
     <Button className="back" to={location.state?.from ?? '/'}>
         <span className="circle">
@@ -12,7 +11,7 @@ return (
         </span>
         <span className="button-text">BACK</span>
     </Button>
-);
+    )
 };
 
 export default ButtonBack;
