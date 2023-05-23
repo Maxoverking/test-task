@@ -1,40 +1,32 @@
+// import { getUsers} from "../../../servises/servises";
+// import { usersGetAction } from "../../../redux/users/actions";
+import {  pagesStore } from "../../../redux/users/usersSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { getUsersThunk } from "../../../servises/servises";
 import Card from "../../Card/Card";
 import { NavigationButton } from "../../NavigationButton/NavigationButton";
 import { usersPagesSelector, usersSelector } from "../../../redux/users/selectors";
 import { BUTTON, CONTAINER,LOADER } from "./CardPage.styled";
 import { useEffect, useState } from "react";
-import { getUsers } from "../../../servises/servises";
-import { usersGetAction } from "../../../redux/users/actions";
-import {  pagesStore } from "../../../redux/users/usersSlice";
 import { LineWave } from "react-loader-spinner";
 
 
 const CardPage = () => {
     const dispatch = useDispatch();
     const users = useSelector(usersSelector);
-    const page = useSelector(usersPagesSelector);
+    const previousPage = useSelector(usersPagesSelector);
 
-    const [pages, setPages] = useState(1);
+    const [page, setPage] = useState(1);
 
     useEffect(() => {
-    const fetchData = async () => {
-        try {
-            if (page < pages) {
-            const getUsersData = await getUsers(pages);
-            dispatch(usersGetAction(getUsersData));
-            dispatch(pagesStore(pages));
-          
-            }
-        } catch (error) {
-        console.log(error);
+        if (previousPage < page) {
+            dispatch(getUsersThunk(page));
+            dispatch(pagesStore(page));
         }
-    };
-    fetchData();
-  }, [dispatch, page, pages]);
+  }, [dispatch, previousPage, page]);
 
     const loadMore = () => {
-    setPages((page) => page + 1);
+    setPage((page) => page + 1);
     };
     return (
         <>
@@ -70,3 +62,23 @@ const CardPage = () => {
     )
 }
 export default CardPage;
+
+
+//======================================
+ //было
+
+ //     useEffect(() => {
+//     const fetchData = async () => {
+//         try {
+//             if (previousPage < page) {
+//             const getUsersData = await getUsers(page);
+//             dispatch(usersGetAction(getUsersData));
+//             dispatch(pagesStore(page));
+          
+//             }
+//         } catch (error) {
+//         console.log(error);
+//         }
+//     };
+//     fetchData();
+//   }, [dispatch, previousPage, pages]);
