@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-const HomePage = lazy(() => import('./component/pages/HomePage/HomePage.jsx'));
-const CardPage = lazy(() => import('./component/pages/CardPage/CardPage.jsx'));
+const HomePage = lazy(() => import('./component/pages/HomePage'));
+const CardPage = lazy(() => import('./component/pages/CardPage'));
 
 function App() {
   return (
