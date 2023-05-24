@@ -10,6 +10,7 @@ export const BUTTON = styled(NavLink)`
   padding: 6px 10px;
   background: transparent;
   color: #d1af27;
+  z-index: 1000;
   @media (min-width: 320px) and (max-width: 610px) {
     margin-top: 200px;
   }
