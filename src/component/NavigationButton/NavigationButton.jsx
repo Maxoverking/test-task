@@ -8,14 +8,14 @@ import {
   LightButtonWrap,
   LightHolder,
 } from './NavigationButton.styled';
+import { useDispatch, useSelector } from 'react-redux';
 import { IoIosMan } from 'react-icons/io';
 import { MdEmojiPeople } from 'react-icons/md';
 import { GiHumanPyramid } from 'react-icons/gi';
-import { useDispatch, useSelector } from 'react-redux';
+import ButtonBack from '../MyIcons/ButtonBack';
 import { filtered } from '../../redux/users/usersSlice';
 import { showCard } from '../../constants/showCard';
 import { usersFilterSelector } from '../../redux/users/selectors';
-import ButtonBack from '../MyIcons/ButtonBack';
 
 const NavigationButton = () => {
   const currentLight = useSelector(usersFilterSelector);
@@ -68,4 +68,4 @@ const NavigationButton = () => {
     </>
   );
 };
-export { NavigationButton };
+export default NavigationButton;

@@ -50,4 +50,4 @@ const TweetBlock = ({ user }) => {
     </>
   );
 };
-export { TweetBlock };
+export default TweetBlock;

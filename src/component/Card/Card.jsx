@@ -6,9 +6,9 @@ import {
   AVATAR_IMG,
   DIV_IMG,
 } from './Card.styled';
+import TweetBlock from '../Tweet';
 import { LogoGoit } from '../MyIcons/Logo';
 import { Round } from '../MyIcons/Round';
-import { TweetBlock } from '../Tweet/TweetBlock';
 import { useSelector } from 'react-redux';
 import { usersFollowSelector } from '../../redux/users/selectors';
 

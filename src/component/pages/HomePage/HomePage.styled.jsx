@@ -1,8 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { GiExitDoor } from 'react-icons/gi';
 
 export const BUTTON = styled(NavLink)`
   position: absolute;
+  display: flex;
+  align-items: center;
   right: 60px;
   font-size: 20px;
   margin-top: 20px;
@@ -12,7 +15,20 @@ export const BUTTON = styled(NavLink)`
   color: #d1af27;
   z-index: 1000;
   @media (min-width: 320px) and (max-width: 610px) {
-    margin-top: 200px;
+    /* top: 30px; */
+    margin-top: 60px;
+  }
+`;
+export const EntryDoor = styled(GiExitDoor)`
+  color: #c0f;
+
+  @media (min-width: 320px) and (max-width: 810px) {
+    width: 100px;
+    height: 200px;
+  }
+  @media (min-width: 810px) {
+    width: 100px;
+    height: 80px;
   }
 `;
 export const P = styled.p`
@@ -42,11 +58,13 @@ export const DIV = styled.div`
   left: 60px;
   font-size: 20px;
   margin-top: 20px;
-  height: 500px;
   background: transparent;
   color: #d1af27;
   @media (min-width: 1030px) {
     max-width: 400px;
+  }
+  @media (max-width: 810px) {
+    display: none;
   }
 `;
 export const DIV_CARD = styled.div`
@@ -54,4 +72,31 @@ export const DIV_CARD = styled.div`
   display: flex;
   bottom: 30px;
   right: 50px;
+  @media (max-width: 810px) {
+    top: 30px;
+    left: 40px;
+    flex-direction: column;
+  }
+  @media (max-width: 405px) {
+    visibility: hidden;
+  }
+`;
+
+export const DIV_SCROLL = styled.div`
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+`;
+export const IMG = styled.img`
+  @media (max-width: 810px) {
+    max-width: 30%;
+  }
+`;
+export const SPAN = styled.span`
+  font-weight: 700;
+  font-size: 24px;
+  color: #d1af27;
+  @media (max-width: 810px) {
+    justify-content: center;
+  }
 `;

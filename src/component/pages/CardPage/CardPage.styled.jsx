@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const CONTAINER = styled.div`
+  /* height: 100vh; */
   margin-bottom: 50px;
   text-align: center;
 `;
@@ -17,6 +18,7 @@ export const BUTTON = styled.button`
   border-radius: 10px;
   transition: background-color 250ms, transform 350ms,
     cubic-bezier(0.215, 0.61, 0.355, 1), color 250ms;
+  /* scroll-snap-align: start; */
 
   &:hover {
     background: #5cd3a8;
