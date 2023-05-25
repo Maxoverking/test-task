@@ -19,6 +19,7 @@ const CardPage = () => {
   const users = useSelector(usersSelector);
   const status = useSelector(usersStatusSelector);
   const previousPage = useSelector(usersPagesSelector);
+
   const [page, setPage] = useState(1);
 
   useEffect(() => {
