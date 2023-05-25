@@ -29,7 +29,7 @@ const ThreeScene = () => {
         1,
         1000
       );
-      camera.position.set(30, 18, 51);
+      camera.position.set(26, 2, 51);
 
       renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
       renderer.setSize(window.innerWidth, window.innerHeight);
